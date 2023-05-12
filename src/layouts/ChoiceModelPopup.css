@@ -1,0 +1,20 @@
+.experttalkblock5btn {
+    color: #1183ff;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #ffdd17;
+    padding: 5px;
+    width: 170px;
+    float: left;
+    margin-right: 25px;
+    border-radius: 5px;
+    text-align: center;
+    background: #ffdd17;
+    height: 46px;
+    line-height: 18px;
+}
+.bottomdiv{
+    background:'#ffdd17';
+    margin-top: 10px;
+    align-items: center;
+}

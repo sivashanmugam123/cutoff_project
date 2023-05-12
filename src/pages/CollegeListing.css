@@ -1,0 +1,42 @@
+.heading{
+    color: chocolate;
+    
+}
+
+.subheading{
+    color: green
+    
+}
+
+.tableheading{
+    color: purple
+    
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+ color:purple
+}
+
+/* tr:nth-child(even) {
+    background-color: lightblue
+} */
+
+.table-striped tbody tr.highlight td {
+    background-color: #F2F5A9;
+  }
+.fixheader{
+    top: 0;
+   position: sticky;
+   background-color: beige;
+}
+
+/* .table1, thead,th, td {
+    border: 1px solid black;
+  }
+
+  .table1, thead,tbody,th, td {
+    border: 1px solid black;
+  } */
+
+/* background-color: rgb(118, 187, 189); */
