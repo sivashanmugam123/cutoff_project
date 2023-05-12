@@ -2,8 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Modal, Button} from 'react-bootstrap'; 
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';  
-import { Nav, Navbar, NavDropdown, MenuItem, NavItem } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+
 function ModelPopUp() {  
     const [show, setShow] = useState(false);  
     

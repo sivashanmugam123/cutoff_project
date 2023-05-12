@@ -1,21 +1,17 @@
-import { useState } from "react";
 import "./App.css";
 import Career from "./pages/Career";
-import { Button } from "react-bootstrap";
 import {Routes,Route} from 'react-router-dom';
 import About from "./pages/About";
 import NoMatch from "./pages/NoMatch";
 import Domains from "./pages/Domains";
 import Courses from "./pages/Courses";
 import CollegeListing from "./pages/CollegeListing";
-import PortalHeader from './components/portalHeader'
+import PortalHeader from "./components/PortalHeader"
 import PortalFooter from "./components/PortalFooter";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <>  
    <PortalHeader/>
     <Routes>
       <Route path="/" element={<Career/>}></Route>

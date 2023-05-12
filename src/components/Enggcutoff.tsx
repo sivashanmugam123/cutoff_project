@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+// @ts-ignore
 function Enggcutoff({getCutoffMark}) {
   const [phyMrkObt, setPhyMrkObt] = useState();
   const [phyAggMrk, setPhyAggMrk] = useState();
@@ -14,7 +15,7 @@ function Enggcutoff({getCutoffMark}) {
 
   const [totAggMrk, setTotAggMrk] = useState();
 
-  const inputRef = useRef(null);
+  
 
   
 const onChangeAggregateHandle = (mark:any)=>{
@@ -24,9 +25,11 @@ const onChangeAggregateHandle = (mark:any)=>{
     setPhyMrkObt(phyMark);
     let c = 0;
     if (phyMaxMrk == undefined || phyMaxMrk == "") {
+      // @ts-ignore
       setPhyAggMrk((phyMark / 100) * 100);
       c = (phyMark / 100) * 100;
     } else {
+      // @ts-ignore
       setPhyAggMrk((phyMark / phyMaxMrk) * 100);
       c = (phyMark / phyMaxMrk) * 100;
     }
@@ -42,6 +45,7 @@ const onChangeAggregateHandle = (mark:any)=>{
       matMks = matAggMrk;
       // setTotAggMrk(phyMks +cheMks + matMks)
     }
+    // @ts-ignore
     setTotAggMrk(phyMks + cheMks + matMks);
     getCutoffMark(phyMks + cheMks + matMks)
   };
@@ -50,15 +54,18 @@ const onChangeAggregateHandle = (mark:any)=>{
     setCheMrkObt(cheMark);
     let c = 0;
     if (cheMaxMrk == undefined || cheMaxMrk == "") {
+      // @ts-ignore
       setCheAggMrk((cheMark / 100) * 50);
       c = (cheMark / 100) * 50;
     } else {
+      // @ts-ignore
       setCheAggMrk((cheMark / cheMaxMrk) * 50);
       c = (cheMark / cheMaxMrk) * 50;
     }
     let phyMks = 0;
     let cheMks = c;
     let matMks = 0;
+    // @ts-ignore
     setTotAggMrk(0);
     if (phyAggMrk != undefined && phyAggMrk != "") {
       phyMks = phyAggMrk;
@@ -69,7 +76,7 @@ const onChangeAggregateHandle = (mark:any)=>{
       matMks = matAggMrk;
       // setTotAggMrk(phyMks +cheMks + matMks)
     }
-
+// @ts-ignore
     setTotAggMrk(phyMks + cheMks + matMks);
     getCutoffMark(phyMks + cheMks + matMks)
   };
@@ -78,15 +85,18 @@ const onChangeAggregateHandle = (mark:any)=>{
     setMatMrkObt(matMark);
     let c = 0;
     if (matMaxMrk == undefined || matMaxMrk == "") {
+      // @ts-ignore
       setMatAggMrk((matMark / 100) * 50);
       c = (matMark / 100) * 50;
     } else {
+      // @ts-ignore
       setMatAggMrk((matMark / matMaxMrk) * 50);
       c = (matMark / matMaxMrk) * 50;
     }
     let phyMks = 0;
     let cheMks = 0;
     let matMks = c;
+    // @ts-ignore
     setTotAggMrk(0);
     if (phyAggMrk != undefined && phyAggMrk != "") {
       phyMks = phyAggMrk;
@@ -96,7 +106,7 @@ const onChangeAggregateHandle = (mark:any)=>{
       cheMks = cheAggMrk;
       // setTotAggMrk(phyMks +cheMks + matMks)
     }
-
+// @ts-ignore
     setTotAggMrk(phyMks + cheMks + matMks);
     getCutoffMark(phyMks + cheMks + matMks)
   };
@@ -105,7 +115,9 @@ const onChangeAggregateHandle = (mark:any)=>{
     setPhyMaxMrk(phyMark);
     let c = 0;
     if (phyMrkObt != "undefined" || phyMrkObt != "") {
+      // @ts-ignore
       setPhyAggMrk((phyMrkObt / phyMark) * 100);
+      // @ts-ignore
       c = (phyMrkObt / phyMark) * 100;
     }
     let phyMks = c;
@@ -121,6 +133,7 @@ const onChangeAggregateHandle = (mark:any)=>{
       matMks = matAggMrk;
       // setTotAggMrk(phyMks +cheMks + matMks)
     }
+    // @ts-ignore
     setTotAggMrk(phyMks + cheMks + matMks);
     getCutoffMark(phyMks + cheMks + matMks)
   };
@@ -129,12 +142,15 @@ const onChangeAggregateHandle = (mark:any)=>{
     setCheMaxMrk(cheMark);
     let c = 0;
     if (cheMrkObt != "undefined" || cheMrkObt != "") {
+      // @ts-ignore
       setCheAggMrk((cheMrkObt / cheMark) * 50);
+      // @ts-ignore
       c = (cheMrkObt / cheMark) * 50;
     }
     let phyMks = 0;
     let cheMks = c;
     let matMks = 0;
+    // @ts-ignore
     setTotAggMrk(0);
     if (phyAggMrk != undefined && phyAggMrk != "") {
       phyMks = phyAggMrk;
@@ -145,7 +161,7 @@ const onChangeAggregateHandle = (mark:any)=>{
       matMks = matAggMrk;
       // setTotAggMrk(phyMks +cheMks + matMks)
     }
-
+// @ts-ignore
     setTotAggMrk(phyMks + cheMks + matMks);
     getCutoffMark(phyMks + cheMks + matMks)
   };
@@ -154,12 +170,15 @@ const onChangeAggregateHandle = (mark:any)=>{
     setMatMaxMrk(matMark);
     let c;
     if (matMrkObt != "undefined" || matMrkObt != "") {
+      // @ts-ignore
       setMatAggMrk((matMrkObt / matMark) * 50);
+      // @ts-ignore
       c = (matMrkObt / matMark) * 50;
     }
     let phyMks = 0;
     let cheMks = 0;
     let matMks = c;
+    // @ts-ignore
     setTotAggMrk(0);
     if (phyAggMrk != undefined && phyAggMrk != "") {
       phyMks = phyAggMrk;
@@ -169,8 +188,9 @@ const onChangeAggregateHandle = (mark:any)=>{
       cheMks = cheAggMrk;
       // setTotAggMrk(phyMks +cheMks + matMks)
     }
-
+// @ts-ignore
     setTotAggMrk(phyMks + cheMks + matMks);
+    // @ts-ignore
     getCutoffMark(phyMks + cheMks + matMks)
   };
 

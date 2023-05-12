@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import footerico from '../img/footer_ico.png'
 function PortalFooter(){

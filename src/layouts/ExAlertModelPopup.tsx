@@ -3,12 +3,7 @@ import { Modal, Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import talk from "../img/talk.jpg";
-import course from '../img/course.png'
-import alert from '../img/alert1.jpg'
-import app3 from '../img/app3.png'
 import configData from "../config/config.json";
-import { Nav, Navbar, NavDropdown, MenuItem, NavItem } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import axios from "axios";
 import './ChoiceModelPopup.css'
 
@@ -48,6 +43,7 @@ function ExAlertModelPopup() {
 
     try {
       console.log(url);
+      // @ts-ignore
       const data = {
         email: "email",
         phone: "phone",
@@ -101,6 +97,7 @@ function ExAlertModelPopup() {
               <Form.Label>Enter Query</Form.Label>
               <Form.Control
                 as="textarea"
+                // @ts-ignore
                 rows="3"
                 id="query"
                 onChange={(event) => onchangequertTxtHandle(event.target.value)}

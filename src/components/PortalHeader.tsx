@@ -1,11 +1,8 @@
-import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../img/rightcourse.png'
-import talk from '../img/talk.jpg'
 import course from '../img/course.png'
 import alert from '../img/alert1.jpg'
-import app3 from '../img/app3.png'
 import CallToModelPopup from '../layouts/CallToModelPopup'
 import './PortalHeader.css';
 import ChoiceModelPopup from '../layouts/ChoiceModelPopup';

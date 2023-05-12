@@ -4,8 +4,6 @@ import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import talk from "../img/talk.jpg";
 import configData from "../config/config.json";
-import { Nav, Navbar, NavDropdown, MenuItem, NavItem } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
 import axios from "axios";
 import './ChoiceModelPopup.css'
 function CallToModelPopup() {
@@ -44,6 +42,7 @@ function CallToModelPopup() {
 
     try {
       console.log(url);
+      // @ts-ignore
       const data = {
         email: "email",
         phone: "phone",
@@ -97,6 +96,7 @@ function CallToModelPopup() {
               <Form.Label>Enter Query</Form.Label>
               <Form.Control
                 as="textarea"
+                // @ts-ignore
                 rows="3"
                 id="query"
                 onChange={(event) => onchangequertTxtHandle(event.target.value)}

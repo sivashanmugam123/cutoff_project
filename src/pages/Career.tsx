@@ -1,5 +1,3 @@
-import { Button } from 'react-bootstrap';
-import About from './About';
 import './Career.css';
 import {useNavigate}  from 'react-router-dom'
 function Career(){

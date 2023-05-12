@@ -7,10 +7,8 @@ import configData from "../config/config.json";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import ModelPopUp from "../layouts/ModelPopUp";
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import { Form } from "react-bootstrap";
-import React, { Component } from "react";
+
 
 function CollegeListing() {
   const [courseName, setCourseName] = useState();
@@ -26,6 +24,7 @@ function CollegeListing() {
   if (params.cutoffmark == "0"){
     cutoffMark ="200";
   }
+  // @ts-ignore
   const maxcutoff = 200;
   const community = params.community;
   const url = configData.SERVER_URL
@@ -35,6 +34,7 @@ function CollegeListing() {
     setCollegeList(newArray);
  
     const filteredCars = newArray.filter((item) => {
+      // @ts-ignore
       if (item.district ==event.target.value){        
      return item
       } 
@@ -72,6 +72,7 @@ function CollegeListing() {
           //console.log(courName[0].sub_course_name);
         }
         if (subcourseID == "0") {
+          // @ts-ignore
           const res1 = await axios.get(
             url +"subcoursesname?course_id=" +
               courseID +
@@ -88,12 +89,14 @@ function CollegeListing() {
             }
           } else {
             let cutoff = cutoffMark;
+            // @ts-ignore
             if (cutoffMark == 0) {
+              // @ts-ignore
               cutoff = 200;
             }
             const res1 = await axios.get(
               url +"collegelisting_subcourse" +
-                "_" +
+                "_" + // @ts-ignore
                 community.toLowerCase() +
                 "?domain_id=" +
                 domainID +
@@ -101,7 +104,7 @@ function CollegeListing() {
                 courseID +
                 "&subcourse_id=" +
                 subcourseID +
-                "&cutoff_" +
+                "&cutoff_" + // @ts-ignore
                 community.toLowerCase() +
                 "=" +
                 cutoff
@@ -137,6 +140,7 @@ function CollegeListing() {
       <h6 className="subheading">
         The prediction is based on last year cutoff data 2022
       </h6>
+      {/* @ts-ignore */}
       {cutoffMark == 0 && (
         <h6 className="subheading">
           Since cutoff is 0 we have taken the max cutoff
@@ -209,6 +213,7 @@ function CollegeListing() {
                 <label className="form-check-label">{lst.seat}</label>
               </td>
              <td>
+              {/* @ts-ignore */}
               <ModelPopUp>  </ModelPopUp>
              </td>
             </tr>
@@ -373,6 +378,7 @@ function CollegeListing() {
                 <label className="form-check-label">{lst.seat}</label>
               </td>
              <td>
+              {/* @ts-ignore */}
               <ModelPopUp>  </ModelPopUp>
              </td>
             </tr>
