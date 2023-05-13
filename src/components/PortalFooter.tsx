@@ -1,5 +1,5 @@
 import Navbar from 'react-bootstrap/Navbar';
-import footerico from '../img/footer_ico.png'
+import footerico from '/img/footer_ico.png'
 function PortalFooter(){
     return <>
 <Navbar>

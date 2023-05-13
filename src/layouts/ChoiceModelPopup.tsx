@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
-import app3 from '../img/app3.png'
+import app3 from '/img/app3.png'
 import configData from "../config/config.json";
 import axios from "axios";
 import './ChoiceModelPopup.css'
