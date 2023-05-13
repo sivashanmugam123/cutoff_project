@@ -3,7 +3,6 @@ import { Modal, Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import talk from "/img/talk.jpg";
-import configData from "../config/config.json";
 import axios from "axios";
 import './ChoiceModelPopup.css'
 
@@ -15,7 +14,7 @@ function ExAlertModelPopup() {
 
   const modalClose = () => setShow(false);
   const modalShow = () => setShow(true);
-  let url = configData.SERVER_URL + "query_form";
+  let url = import.meta.env.VITE_REACT_API_URL + "query_form";
   const onchangeEmailHandle = (email: any) => {
     setEmail(email);
   };

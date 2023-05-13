@@ -5,8 +5,6 @@ import axios from "axios";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Enggcutoff from "../components/Enggcutoff";
-import configData from '../config/config.json';
-
 import "./Courses.css";
 
 const Courses = () => {
@@ -17,7 +15,7 @@ const Courses = () => {
   const [category, setCategory] = useState();
   const [cutoffMrk, setCutoffMrk] = useState(0);
   const [community, setCommunity] = useState("ALL");
-  const url = configData.SERVER_URL
+  const url = import.meta.env.VITE_REACT_API_URL;
   const nvigate = useNavigate();
   const params = useParams();
   const domainID = params.domainID;

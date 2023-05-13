@@ -4,12 +4,11 @@ import axios from "axios";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import './Domains.css';
-import configData from '../config/config.json';
 const Domains = () => {
   const [domains, setDomains] = useState([]);
   const [state, setState] = useState(0);
   const nvigate = useNavigate();
-  const url = configData.SERVER_URL;
+  const url = import.meta.env.VITE_REACT_API_URL;
   const onValueChange = (event: any) => {
     setState(event.target.value);
   };

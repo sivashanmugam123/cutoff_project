@@ -3,7 +3,6 @@ import { Modal, Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import app3 from '/img/app3.png'
-import configData from "../config/config.json";
 import axios from "axios";
 import './ChoiceModelPopup.css'
 function ChoiceModelPopup() {
@@ -14,9 +13,10 @@ function ChoiceModelPopup() {
 
   const modalClose = () => setShow(false);
   const modalShow = () => setShow(true);
-  let url = configData.SERVER_URL + "query_form";
+  let url = import.meta.env.VITE_REACT_API_URL  +  "query_form";
   const onchangeEmailHandle = (email: any) => {
     setEmail(email);
+     
   };
 
   const onchangePhoneHandle = (phone: any) => {
@@ -120,6 +120,7 @@ function ChoiceModelPopup() {
           </Button>
         </Modal.Footer>
       </Modal>
+      <p> <code>{import.meta.env.REACT_API_URL}</code></p>
     </div>
   );
 }

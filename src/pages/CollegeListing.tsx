@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
 import "./CollegeListing.css";
-import configData from "../config/config.json";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import ModelPopUp from "../layouts/ModelPopUp";
@@ -27,7 +26,7 @@ function CollegeListing() {
   // @ts-ignore
   const maxcutoff = 200;
   const community = params.community;
-  const url = configData.SERVER_URL
+  const url = import.meta.env.VITE_REACT_API_URL;
   const nvigate = useNavigate();
   const onChangeHandlerColor = (event:any) =>{    
     let newArray = collegeListAll.slice();
